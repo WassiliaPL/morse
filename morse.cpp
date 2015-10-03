@@ -4,20 +4,16 @@
 using namespace std;
 int i, menu;
 string tekst;
-string a = ".-";
 
 void deszyfrowanie()
     {
-    for (i=0; i<tekst.length(); i++)
-        {
-        if (tekst == a) cout << "a";
-        if (tekst == "-...") cout << "b";
-        if (tekst == "-.-.") cout << "c";
-        }
+    //WIP
     }
 
 void szyfrowanie()
     {
+    cout << " \n";
+    cout << "Wiadomosc po zaszyfrowaniu: \n";
     for (i=0; i<tekst.length(); i++)
         {
         if (tekst[i] == 'a') cout << ".-/";
@@ -48,13 +44,14 @@ void szyfrowanie()
         if (tekst[i] == 'z') cout << "--../";
         if (tekst[i] == ' ') cout << "/";
         }
+    cout << " \n";
     }
 
 void wprowadzanie()
     {
     cout << "Wprowadz wiadomosc: \n";
     getline(cin, tekst);
-    cout << "\n";
+    cout << " \n";
     }
 
 void wybor()
@@ -75,15 +72,18 @@ void wybor()
 
 void konczenie()
     {
+    cout << " \n";
     cout << "Wcisnij ENTER aby zakonczyc";
     cin.ignore();
+    cin.get();
     }
 
 int main()
     {
     wprowadzanie();
     wybor();
-    konczenie;
+    konczenie();
+    return 0;
     }
 
 
